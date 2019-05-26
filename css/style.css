@@ -1,0 +1,160 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1.8em;
+  color: rgb(102, 102, 102);
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("../img/1.jpg");
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url("../img/3.jpg");
+  min-height: 200px;
+}
+
+.pimg3 {
+  background-image: url("../img/3.jpg");
+  background-color: #000;
+}
+
+.section {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.section-light {
+  background-color: lightgray;
+  color: #666;
+}
+
+.section .about {
+  text-align: justify;
+}
+
+.section li {
+  text-align: left;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.section .fa,
+.section .fab {
+  color: #ddd;
+}
+
+.section .fa:hover,
+.section .fab:hover {
+  color: pink;
+}
+
+.ptext {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.photo img {
+  max-width: 200px;
+  border-radius: 50%;
+  padding-top: 2rem;
+}
+
+.grid-1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+.grid-2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.resume a {
+  display: inline-block;
+  text-decoration: none;
+  color: pink;
+  border: 2px solid pink;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: 0.4s linear;
+  margin-top: 40px;
+}
+.resume a:hover {
+  color: #fff;
+  background: pink;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  color: #000;
+  font-weight: 500px;
+  font-size: 16px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 568px) {
+  .pimg1,
+  .pimg2,
+  .pimg3 {
+    background-attachment: scroll;
+  }
+
+  .grid-1,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
