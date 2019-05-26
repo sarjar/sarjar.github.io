@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   font-size: 16px;
@@ -7,7 +8,7 @@ body, html {
   line-height: 1.8em;
   color: rgb(102, 102, 102);
   /* CSS Smooth Scroll */
-  overflow-y: scroll; 
+  overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
@@ -99,15 +100,15 @@ body, html {
 
 /* Scroll down funcion implementation */
 .scroll-down {
-	position: absolute;
-	left: 50%;
-	bottom: 30px;
-	display: block;
-	text-align: center;
-	font-size: 20px;
-	z-index: 100;
-	text-decoration: none;
-	text-shadow: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
   width: 13px;
   height: 13px;
   border-bottom: 2px solid #fff;
@@ -117,32 +118,56 @@ body, html {
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
-	-webkit-animation: fade_move_down 4s ease-in-out infinite;
-	-moz-animation:    fade_move_down 4s ease-in-out infinite;
-	animation:         fade_move_down 4s ease-in-out infinite;
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
 }
 
 /* animated scroll arrow animation */
 @-webkit-keyframes fade_move_down {
-  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @-moz-keyframes fade_move_down {
-  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @keyframes fade_move_down {
-  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 
 .photo img {
   max-width: 200px;
   border-radius: 50%;
-  padding-top: 2rem;
+  margin: 3rem;
 }
 
 .grid-1 {
@@ -171,6 +196,7 @@ body, html {
   transition: 0.4s linear;
   margin-top: 40px;
 }
+
 .resume a:hover {
   color: #fff;
   background: pink;
@@ -201,5 +227,9 @@ footer p {
   .grid-1,
   .grid-2 {
     grid-template-columns: 1fr;
+  }
+
+  .photo img {
+    margin: 0;
   }
 }
